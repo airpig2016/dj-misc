@@ -13,9 +13,9 @@ pipeline {
                 echo '编译环境....'
                 sh 'printenv'
                 echo 'mvn版本信息..'
-                sh 'mvn --version'
+                sh '/Users/dajiechen/software/java/maven/apache-maven-3.3.9/bin/mvn --version'
                 echo '编译工程....'
-                sh 'mvn clean'
+                sh '/Users/dajiechen/software/java/maven/apache-maven-3.3.9/bin/mvn clean'
             }
         }
 
