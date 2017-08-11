@@ -11,6 +11,11 @@
 	<name>misc</name>
 	<description>dj misc</description>
 
+	<modules>
+		<module>user</module>
+		<module>gate</module>
+	</modules>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
