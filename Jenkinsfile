@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-       COPY_RIGHT = '福建阿思可网络教育有限公司版权所有'
+       COPY_RIGHT = 'chen dajie'
        VERSION    = '1.0.0'
     }
 
@@ -11,6 +11,11 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo '编译环境....'
+                sh 'printenv'
+                echo 'mvn版本信息..'
+                sh 'mvn --version'
+                echo '编译工程....'
+                sh 'mvn clean'
             }
         }
 
