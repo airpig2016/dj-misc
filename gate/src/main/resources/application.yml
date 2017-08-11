@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: dj-gate-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      stat-view-servlet:
+        allow: true
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+
+
+server:
+  port: 33000
+
+userapi:
+  ribbon:
+    listOfServers: 127.0.0.1:33001
+
+zuul:
+  routes:
+    userapi:
+      path: /userapi/**
+      stripPrefix: true
